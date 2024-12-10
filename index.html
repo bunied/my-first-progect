@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Кино Сайты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #43050d;
+            color: #ffffff;
+        }
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 80px;
+    color: #951010;
+    text-shadow: 2px 2px #bcb9b9;
+    margin-bottom: 20px;
+}
+
+header nav {
+    display: inline-flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid rgb(209, 16, 16);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background: rgb(19, 5, 5);
+    color: rgb(232, 25, 25);
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    border: 1px solid rgb(209, 16, 16);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(19, 5, 5);
+    color: rgb(232, 25, 25);
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        section {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: gold;
+        }
+
+        
+
+        input, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: rgb(255, 74, 104);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+       
+        }
+
+        button:hover {
+            background: rgb(210, 4, 4);
+            transform: scale(1.05);
+        }
+
+        
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .flex-item {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 400px;
+            
+            cursor: pointer;
+        }
+
+        .flex-item img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .flex-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .flex-item:hover {
+            transform: scale(1.1);
+            background: rgba(255, 165, 0, 0.8);
+        }
+
+        .flex-item a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: darkorange;
+            border-radius: 5px;
+           
+        }
+
+        .flex-item a:hover {
+            background: gold;
+        }
+
+     
+         .contact {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #1c1515;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+   
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgb(186, 13, 13);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+         
+        .grid-item button {
+        background-color: #d50e0e;
+        color: rgb(7, 6, 6);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    #sideMenu {
+    width: 250px;
+    height: 100%;
+    background-color: #ff6f61;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    transition: left 0.3s ease;
+  }
+  
+  #menuToggle:checked + label + #sideMenu {
+    left: 0; 
+  }
+  
+  #menuToggle:checked + label {
+    background-color: #ff6f61; 
+  }
+  
+  .menuButton {
+    display: inline-block;
+    background-color: #281dfc;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  #socialMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  
+  #shareToggle:checked + label + #socialMenu {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .shareButton {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    border-radius: 5px;
+    z-index: 1000; 
+  }
+  
+  #socialMenu a {
+    color: #1a76d9;
+    font-size: 24px;
+  }
+  
+  #socialMenu a:hover {
+    color: #007bff;
+  }
+  
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: #333;
+}
+
+    
+
+
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <h1><i>KINOСАЙТ</i></h1>
+        <nav>
+            <a href="spisok.html">Жанры</a>
+            <a href="forma.html">Купить билеты</a>
+            <a href="otzv.html">Отзыв</a>   
+            <div class="dropdown">
+            <a href="#">Прочее</a>
+            <div class="dropdown-menu">
+            <a href="https://www.kinopark.kz/ru">Кинотеатр</a>
+            <a href="https://2gis.kz/almaty/branches/70000001037363297?m=76.894139%2C43.242805%2F12">Адрес</a>
+                </div>
+            </div>
+        </nav>       
+        </nav>
+    </header>
+    
+    <main>
+         
+        <section id="gallery">
+            <h2>Популярные фильмы</h2>
+            <div class="grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/5579913/1013792308/S600xU_2x" class="card-img-top" alt="Субстанция">
+                    <div class="card-body">
+                        <h5 class="card-title">Субстанция</h5>
+                        <p class="card-text">Фантастический фильм о загадочной сущности, изменяющей реальность. Увлекательное и напряженное зрелище.</p>
+                        <a href="https://www.kinopoisk.ru/film/4860213/?utm_referrer=yandex.kz" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/9706867/687336552/S600xU_2x" class="card-img-top" alt="Пеле">
+                    <div class="card-body">
+                        <h5 class="card-title">Пеле</h5>
+                        <p class="card-text">Биографическая драма о жизни легендарного футболиста Пеле, его пути к славе и триумфу.</p>
+                        <a href="https://www.kinopoisk.ru/film/803422/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/10920629/934864355/S600xU_2x" class="card-img-top" alt="Крейвен-Охотник">
+                    <div class="card-body">
+                        <h5 class="card-title">Крейвен-Охотник</h5>
+                        <p class="card-text">Остросюжетная история о Крейвене, охотнике, бросающем вызов опаснейшим существам.</p>
+                        <a href="https://www.kinopoisk.ru/film/1183578/?utm_referrer=www.yandex.ru" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/5098055/981642102/S600xU_2x" class="card-img-top" alt="Пчеловод">
+                    <div class="card-body">
+                        <h5 class="card-title">Пчеловод</h5>
+                        <p class="card-text">Захватывающий триллер о герое, который возвращается в свое прошлое, чтобы исправить ошибки.</p>
+                        <a href="https://www.kinopoisk.ru/film/4626783/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd;  border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/1966007/859457191/S600xU_2x" class="card-img-top" alt="Дэдпул и Росомаха">
+                    <div class="card-body">
+                        <h5 class="card-title">Дэдпул и Росомаха</h5>
+                        <p class="card-text">Веселое и эпическое приключение двух культовых персонажей Marvel в одном фильме.</p>
+                        <a href="https://www.kinopoisk.ru/film/1008444/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/9707519/917636676/S600xU_2x" class="card-img-top" alt="Особо опасный пассажир">
+                    <div class="card-body">
+                        <h5 class="card-title">Особо опасный пассажир</h5>
+                        <p class="card-text">Напряженный триллер о таинственном пассажире, который превращает обычную поездку в кошмар.</p>
+                        <a href="https://www.kinopoisk.ru/film/5451418/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/7798118/1013965281/S600xU_2x" class="card-img-top" alt="Гладиатор 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Гладиатор 2</h5>
+                        <p class="card-text">Продолжение легендарного фильма о чести, мести и славе в древнеримской арене.</p>
+                        <a href="https://www.kinopoisk.ru/film/1207839/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/935097/975102383/S600xU_2x" class="card-img-top" alt="Ужасающий 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ужасающий 3</h5>
+                        <p class="card-text">Третий фильм культовой серии ужасов с новым уровнем страха и шокирующих сцен.</p>
+                        <a href="https://www.kinopoisk.ru/film/5411536/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 24rem; background-color: #881919; color: black; border: 1px solid #ddd; border-radius: 10px;">
+                    <img src="https://avatars.mds.yandex.net/get-entity_search/1965934/991290427/S600xU_2x" class="card-img-top" alt="Веном: Последний танец">
+                    <div class="card-body">
+                        <h5 class="card-title">Веном: Последний танец</h5>
+                        <p class="card-text">Новое приключение Венома, полное экшена, тайн и удивительных поворотов.</p>
+                        <a href="https://www.kinopoisk.ru/film/4766559/" class="btn btn-primary">Смотреть</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+    </main>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Связь</h2>
+            <p>Связаться с нами: +7 (771) 128-45-67</p>
+            <p>Адрес: ТРЦ MOSKVA Metropolitan ​8-й микрорайон, 37/1​3 этаж</p>
+        </div>
+    </section>
+    <input type="checkbox" id="shareToggle" hidden>
+    <label for="shareToggle" class="shareButton">Бөлісу</label>
+    
+    <div id="socialMenu">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+    </div>
+    <footer>
+        <p>&copy; 2024 KINOСАЙТ .Все права защищены.Этот сайт предназначен только для просмотра фильмов.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

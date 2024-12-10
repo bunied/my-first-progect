@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: black;
+        }
+    .flex-container {
+    height: 600px;      
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    justify-items: center; 
+}
+
+.flex-item {
+    background-color: #b20c0c;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%; 
+    height: 90%;
+    text-align: center;
+}
+
+.flex-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.flex-item:hover img {
+    transform: scale(1.1);
+}
+
+.flex-item:hover {
+    transform: scale(1.05);
+    background: rgba(87, 14, 14, 0.8);
+}
+
+.flex-item a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: rgb(235, 7, 7);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flex-item a:hover {
+    background: rgb(12, 11, 11);
+}
+    
+
+
+@media (max-width: 600px) {
+    .flex-container {
+        grid-template-columns: 1fr; 
+    }
+}
+h1{
+    color: black;
+    font-size: 56px;
+    text-align: center;
+}
+ h3{
+    text-align: center;
+ }
+ footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2f1a1a;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+}
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #2f1a1a;
+    padding-top: 50px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+#sideMenu h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#sideMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sideMenu ul li a:hover {
+    background-color: rgb(235, 7, 7);
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    #sideMenu {
+        width: 200px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="sideMenu">
+        <h3>Меню</h3>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="sport.html">Спорт</a></li>
+          <li><a href="uzhas.html">Ужас</a></li>
+          <li><a href="https://www.kinopoisk.ru/lists/movies/genre--animation/">Мультфильмы</a></li>
+        </ul>
+      </div>
+
+
+
+
+
+    <section id="flex">
+        <h1>Жанры</h1>
+        <div class="flex-container">
+            <div class="flex-item">jpg
+                <img src="https://studiuje.eu/images/stories/logotyp%20kino%20wdk." alt="">
+                <h3>Главное</h3>
+                <a href="index.html">Подробнее</a>
+            </div>
+            <div class="flex-item">
+                <img src="https://progimnaziyasemiczvetiksaratov-r64.gosweb.gosuslugi.ru/netcat_files/userfiles/1637782352_25-sportishka-com-p-emblema-sportivnogo-kluba-komandnii-sport-28.jpg" alt="спорт">
+                <h3>Спорт </h3>
+                <a href="sport.html">Подробнее</a>
+            </div>
+            <div class="flex-item">
+                <img src="https://e7.pngegg.com/pngimages/948/513/png-clipart-graphic-design-art-a-bewitched-place-horror-love-miscellaneous.png" alt="ужасы">
+                <h3>Ужас</h3>
+                <a href="uzhas.html">Подробнее</a>
+            </div>
+            <div class="flex-item"> 
+                <img src="https://sun6-21.userapi.com/impf/c540108/v540108277/195db/U0PolfYRtK0.jpg?size=604x350&quality=96&sign=af5f1b2951eaf3bf37fd9aa30f27918c&c_uniq_tag=TKYqpUq7NeMKCs3JuzNI_uPbvuQmbqnP0eyRb2yAX8g&type=album" alt="Салат">
+                <h3>Мультфильмы</h3>
+                <a href="https://www.kinopoisk.ru/lists/movies/genre--animation/">Подробнее</a>
+            </div>
+            <div class="flex-item">
+                <img src="https://tvonline.live/logo/mirserial.jpg" alt="Салат">
+                <h3>Сериалы</h3>
+                <a href="https://www.kinopoisk.ru/lists/movies/?b=series">Подробнее</a>
+            </div>
+            <div class="flex-item">
+                <img src="https://yt3.googleusercontent.com/BB1Et5SH206swL535iB1EpaFNOISFOZIhelikYnyx2qgtRnJeZ6qNGEb-_xCdhmwKtLB-sO7=s900-c-k-c0x00ffffff-no-rj" alt="Салат">
+                <h3>Аниме</h3>
+                <a href="https://jut.su/">Подробнее</a>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 KINOСАЙТ. Все права защищены.</p>
+    </footer>
+</body>
+</html>
